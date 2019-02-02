@@ -26,6 +26,16 @@ class MarsViewController: UIViewController {
         // router.dataStore = interactor
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setup()
+        self.fetchPhotos()
+    }
+    
+    private func fetchPhotos() {
+        self.interactor?.fetchPhotos(request: Mars.FetchPhotos.Request())
+    }
+    
 }
 
 extension MarsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

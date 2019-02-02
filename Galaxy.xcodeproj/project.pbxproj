@@ -17,6 +17,12 @@
 		F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FA2206059700F7F248 /* MarsInteractor.swift */; };
 		F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FC220605A000F7F248 /* MarsRouter.swift */; };
 		F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FE220605AB00F7F248 /* MarsPresenter.swift */; };
+		F709E402220609FD00F7F248 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E401220609FD00F7F248 /* Extension.swift */; };
+		F709E40522060A9900F7F248 /* MarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40422060A9900F7F248 /* MarsModels.swift */; };
+		F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40822060B2800F7F248 /* MarsWorker.swift */; };
+		F709E40C22060CCA00F7F248 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40B22060CCA00F7F248 /* Photo.swift */; };
+		F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40E22060D3A00F7F248 /* MarsAPI.swift */; };
+		F709E4122206145A00F7F248 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E4112206145A00F7F248 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		F709E3FA2206059700F7F248 /* MarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsInteractor.swift; sourceTree = "<group>"; };
 		F709E3FC220605A000F7F248 /* MarsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRouter.swift; sourceTree = "<group>"; };
 		F709E3FE220605AB00F7F248 /* MarsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPresenter.swift; sourceTree = "<group>"; };
+		F709E401220609FD00F7F248 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F709E40422060A9900F7F248 /* MarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsModels.swift; sourceTree = "<group>"; };
+		F709E40822060B2800F7F248 /* MarsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWorker.swift; sourceTree = "<group>"; };
+		F709E40B22060CCA00F7F248 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F709E40E22060D3A00F7F248 /* MarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsAPI.swift; sourceTree = "<group>"; };
+		F709E4112206145A00F7F248 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +115,16 @@
 		F709E3C12205FB2400F7F248 /* Galaxy */ = {
 			isa = PBXGroup;
 			children = (
-				F709E3F72206004600F7F248 /* Resources */,
+				F709E4102206144D00F7F248 /* Mechanism */,
 				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
+				F709E3F72206004600F7F248 /* Resources */,
+				F709E40A22060CBB00F7F248 /* Models */,
 				F709E400220605B300F7F248 /* MarsScene */,
+				F709E40D22060D2D00F7F248 /* Services */,
+				F709E40722060B0D00F7F248 /* Workers */,
 				F709E3C62205FB2400F7F248 /* Main.storyboard */,
 				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
+				F709E401220609FD00F7F248 /* Extension.swift */,
 			);
 			path = Galaxy;
 			sourceTree = "<group>";
@@ -144,10 +161,43 @@
 			children = (
 				F709E3C42205FB2400F7F248 /* MarsViewController.swift */,
 				F709E3FA2206059700F7F248 /* MarsInteractor.swift */,
+				F709E40422060A9900F7F248 /* MarsModels.swift */,
 				F709E3FC220605A000F7F248 /* MarsRouter.swift */,
 				F709E3FE220605AB00F7F248 /* MarsPresenter.swift */,
 			);
 			path = MarsScene;
+			sourceTree = "<group>";
+		};
+		F709E40722060B0D00F7F248 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40822060B2800F7F248 /* MarsWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F709E40A22060CBB00F7F248 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40B22060CCA00F7F248 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F709E40D22060D2D00F7F248 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40E22060D3A00F7F248 /* MarsAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F709E4102206144D00F7F248 /* Mechanism */ = {
+			isa = PBXGroup;
+			children = (
+				F709E4112206145A00F7F248 /* API.swift */,
+			);
+			path = Mechanism;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,11 +331,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F709E4122206145A00F7F248 /* API.swift in Sources */,
+				F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */,
 				F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */,
 				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
+				F709E40C22060CCA00F7F248 /* Photo.swift in Sources */,
+				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
+				F709E402220609FD00F7F248 /* Extension.swift in Sources */,
 				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
 				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
+				F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
