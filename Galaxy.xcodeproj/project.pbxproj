@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C22205FB2400F7F248 /* AppDelegate.swift */; };
-		F709E3C52205FB2400F7F248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C42205FB2400F7F248 /* ViewController.swift */; };
+		F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C42205FB2400F7F248 /* MarsViewController.swift */; };
 		F709E3C82205FB2400F7F248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C62205FB2400F7F248 /* Main.storyboard */; };
 		F709E3CA2205FB2600F7F248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C92205FB2600F7F248 /* Assets.xcassets */; };
 		F709E3CD2205FB2600F7F248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */; };
 		F709E3D82205FB2600F7F248 /* GalaxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3D72205FB2600F7F248 /* GalaxyTests.swift */; };
 		F709E3E32205FB2600F7F248 /* GalaxyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */; };
+		F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FA2206059700F7F248 /* MarsInteractor.swift */; };
+		F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FC220605A000F7F248 /* MarsRouter.swift */; };
+		F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FE220605AB00F7F248 /* MarsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F709E3BF2205FB2400F7F248 /* Galaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F709E3C22205FB2400F7F248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F709E3C42205FB2400F7F248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F709E3C42205FB2400F7F248 /* MarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsViewController.swift; sourceTree = "<group>"; };
 		F709E3C72205FB2400F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F709E3C92205FB2600F7F248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F709E3CC2205FB2600F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyUITests.swift; sourceTree = "<group>"; };
 		F709E3E42205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3FA2206059700F7F248 /* MarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsInteractor.swift; sourceTree = "<group>"; };
+		F709E3FC220605A000F7F248 /* MarsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRouter.swift; sourceTree = "<group>"; };
+		F709E3FE220605AB00F7F248 /* MarsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,11 @@
 		F709E3C12205FB2400F7F248 /* Galaxy */ = {
 			isa = PBXGroup;
 			children = (
+				F709E3F72206004600F7F248 /* Resources */,
 				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
-				F709E3C42205FB2400F7F248 /* ViewController.swift */,
+				F709E400220605B300F7F248 /* MarsScene */,
 				F709E3C62205FB2400F7F248 /* Main.storyboard */,
-				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
 				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
-				F709E3CE2205FB2600F7F248 /* Info.plist */,
 			);
 			path = Galaxy;
 			sourceTree = "<group>";
@@ -123,6 +128,26 @@
 				F709E3E42205FB2600F7F248 /* Info.plist */,
 			);
 			path = GalaxyUITests;
+			sourceTree = "<group>";
+		};
+		F709E3F72206004600F7F248 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
+				F709E3CE2205FB2600F7F248 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F709E400220605B300F7F248 /* MarsScene */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C42205FB2400F7F248 /* MarsViewController.swift */,
+				F709E3FA2206059700F7F248 /* MarsInteractor.swift */,
+				F709E3FC220605A000F7F248 /* MarsRouter.swift */,
+				F709E3FE220605AB00F7F248 /* MarsPresenter.swift */,
+			);
+			path = MarsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F709E3C52205FB2400F7F248 /* ViewController.swift in Sources */,
+				F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */,
+				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
+				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
+				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Galaxy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Galaxy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
