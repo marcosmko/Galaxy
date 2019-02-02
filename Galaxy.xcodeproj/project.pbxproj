@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C22205FB2400F7F248 /* AppDelegate.swift */; };
+		F709E3C52205FB2400F7F248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C42205FB2400F7F248 /* ViewController.swift */; };
+		F709E3C82205FB2400F7F248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C62205FB2400F7F248 /* Main.storyboard */; };
+		F709E3CA2205FB2600F7F248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C92205FB2600F7F248 /* Assets.xcassets */; };
+		F709E3CD2205FB2600F7F248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */; };
+		F709E3D82205FB2600F7F248 /* GalaxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3D72205FB2600F7F248 /* GalaxyTests.swift */; };
+		F709E3E32205FB2600F7F248 /* GalaxyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F709E3D42205FB2600F7F248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F709E3B72205FB2400F7F248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F709E3BE2205FB2400F7F248;
+			remoteInfo = Galaxy;
+		};
+		F709E3DF2205FB2600F7F248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F709E3B72205FB2400F7F248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F709E3BE2205FB2400F7F248;
+			remoteInfo = Galaxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F709E3BF2205FB2400F7F248 /* Galaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3C22205FB2400F7F248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F709E3C42205FB2400F7F248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F709E3C72205FB2400F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F709E3C92205FB2600F7F248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F709E3CC2205FB2600F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F709E3CE2205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3D72205FB2600F7F248 /* GalaxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyTests.swift; sourceTree = "<group>"; };
+		F709E3D92205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyUITests.swift; sourceTree = "<group>"; };
+		F709E3E42205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F709E3BC2205FB2400F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3D02205FB2600F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DB2205FB2600F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F709E3B62205FB2400F7F248 = {
+			isa = PBXGroup;
+			children = (
+				F709E3C12205FB2400F7F248 /* Galaxy */,
+				F709E3D62205FB2600F7F248 /* GalaxyTests */,
+				F709E3E12205FB2600F7F248 /* GalaxyUITests */,
+				F709E3C02205FB2400F7F248 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F709E3C02205FB2400F7F248 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3BF2205FB2400F7F248 /* Galaxy.app */,
+				F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */,
+				F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F709E3C12205FB2400F7F248 /* Galaxy */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
+				F709E3C42205FB2400F7F248 /* ViewController.swift */,
+				F709E3C62205FB2400F7F248 /* Main.storyboard */,
+				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
+				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
+				F709E3CE2205FB2600F7F248 /* Info.plist */,
+			);
+			path = Galaxy;
+			sourceTree = "<group>";
+		};
+		F709E3D62205FB2600F7F248 /* GalaxyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3D72205FB2600F7F248 /* GalaxyTests.swift */,
+				F709E3D92205FB2600F7F248 /* Info.plist */,
+			);
+			path = GalaxyTests;
+			sourceTree = "<group>";
+		};
+		F709E3E12205FB2600F7F248 /* GalaxyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */,
+				F709E3E42205FB2600F7F248 /* Info.plist */,
+			);
+			path = GalaxyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F709E3BE2205FB2400F7F248 /* Galaxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3E72205FB2600F7F248 /* Build configuration list for PBXNativeTarget "Galaxy" */;
+			buildPhases = (
+				F709E3BB2205FB2400F7F248 /* Sources */,
+				F709E3BC2205FB2400F7F248 /* Frameworks */,
+				F709E3BD2205FB2400F7F248 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Galaxy;
+			productName = Galaxy;
+			productReference = F709E3BF2205FB2400F7F248 /* Galaxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F709E3D22205FB2600F7F248 /* GalaxyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3EA2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyTests" */;
+			buildPhases = (
+				F709E3CF2205FB2600F7F248 /* Sources */,
+				F709E3D02205FB2600F7F248 /* Frameworks */,
+				F709E3D12205FB2600F7F248 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F709E3D52205FB2600F7F248 /* PBXTargetDependency */,
+			);
+			name = GalaxyTests;
+			productName = GalaxyTests;
+			productReference = F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F709E3DD2205FB2600F7F248 /* GalaxyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3ED2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyUITests" */;
+			buildPhases = (
+				F709E3DA2205FB2600F7F248 /* Sources */,
+				F709E3DB2205FB2600F7F248 /* Frameworks */,
+				F709E3DC2205FB2600F7F248 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F709E3E02205FB2600F7F248 /* PBXTargetDependency */,
+			);
+			name = GalaxyUITests;
+			productName = GalaxyUITests;
+			productReference = F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F709E3B72205FB2400F7F248 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Marcos Kobuchi";
+				TargetAttributes = {
+					F709E3BE2205FB2400F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F709E3D22205FB2600F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F709E3BE2205FB2400F7F248;
+					};
+					F709E3DD2205FB2600F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F709E3BE2205FB2400F7F248;
+					};
+				};
+			};
+			buildConfigurationList = F709E3BA2205FB2400F7F248 /* Build configuration list for PBXProject "Galaxy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F709E3B62205FB2400F7F248;
+			productRefGroup = F709E3C02205FB2400F7F248 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F709E3BE2205FB2400F7F248 /* Galaxy */,
+				F709E3D22205FB2600F7F248 /* GalaxyTests */,
+				F709E3DD2205FB2600F7F248 /* GalaxyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F709E3BD2205FB2400F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3CD2205FB2600F7F248 /* LaunchScreen.storyboard in Resources */,
+				F709E3CA2205FB2600F7F248 /* Assets.xcassets in Resources */,
+				F709E3C82205FB2400F7F248 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3D12205FB2600F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DC2205FB2600F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F709E3BB2205FB2400F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3C52205FB2400F7F248 /* ViewController.swift in Sources */,
+				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3CF2205FB2600F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3D82205FB2600F7F248 /* GalaxyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DA2205FB2600F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3E32205FB2600F7F248 /* GalaxyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F709E3D52205FB2600F7F248 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F709E3BE2205FB2400F7F248 /* Galaxy */;
+			targetProxy = F709E3D42205FB2600F7F248 /* PBXContainerItemProxy */;
+		};
+		F709E3E02205FB2600F7F248 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F709E3BE2205FB2400F7F248 /* Galaxy */;
+			targetProxy = F709E3DF2205FB2600F7F248 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F709E3C62205FB2400F7F248 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F709E3C72205FB2400F7F248 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F709E3CC2205FB2600F7F248 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F709E3E52205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F709E3E62205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F709E3E82205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Galaxy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.Galaxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F709E3E92205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Galaxy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.Galaxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F709E3EB2205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Galaxy.app/Galaxy";
+			};
+			name = Debug;
+		};
+		F709E3EC2205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Galaxy.app/Galaxy";
+			};
+			name = Release;
+		};
+		F709E3EE2205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galaxy;
+			};
+			name = Debug;
+		};
+		F709E3EF2205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galaxy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F709E3BA2205FB2400F7F248 /* Build configuration list for PBXProject "Galaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3E52205FB2600F7F248 /* Debug */,
+				F709E3E62205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3E72205FB2600F7F248 /* Build configuration list for PBXNativeTarget "Galaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3E82205FB2600F7F248 /* Debug */,
+				F709E3E92205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3EA2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3EB2205FB2600F7F248 /* Debug */,
+				F709E3EC2205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3ED2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3EE2205FB2600F7F248 /* Debug */,
+				F709E3EF2205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F709E3B72205FB2400F7F248 /* Project object */;
+}
