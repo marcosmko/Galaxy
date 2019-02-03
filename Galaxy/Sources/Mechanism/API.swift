@@ -15,6 +15,7 @@ class Request {
     let parameters: [String: String]
     let data: Data?
     
+    var url: URL?
     static func get(domain: String, endpoint: String, parameters: [String: String] = [:]) -> Request {
         return Request(method: .get,
                        domain: domain,
@@ -40,7 +41,7 @@ class Request {
 }
 
 /// The request method, based on HTTP methods.
-public enum RequestMethod : String {
+public enum RequestMethod: String {
     /// Delete method, used to delete information.
     case delete = "DELETE"
     
