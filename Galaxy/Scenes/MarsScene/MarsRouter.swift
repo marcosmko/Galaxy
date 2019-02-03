@@ -22,14 +22,17 @@ class MarsRouter: NSObject, MarsRouterProtocol, MarsRouting {
     var dataStore: MarsDataStore?
     
     func routeToShowDetail(segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! DetailPhotoViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToShowDetail(source: dataStore!, destination: &destinationDS, sender: sender)
+        guard let dataStore = self.dataStore,
+            let destinationVC = segue.destination as? DetailPhotoViewController,
+            var destinationDS = destinationVC.router?.dataStore else {
+                return
+        }
+        self.passDataToShowDetail(source: dataStore, destination: &destinationDS, sender: sender)
     }
     
     // MARK: Passing data
     
-    func passDataToShowDetail(source: MarsDataStore, destination: inout DetailPhotoDataStore, sender: Any?) {
+    private func passDataToShowDetail(source: MarsDataStore, destination: inout DetailPhotoDataStore, sender: Any?) {
         guard let item: Int = sender as? Int else { return }
         destination.photo = source.photos[item]
     }
