@@ -1,0 +1,42 @@
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - nesting
+  - line_length
+
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+
+included: # paths to include during linting. `--path` is ignored if present.
+  - Galaxy/Sources
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+  - explicit_self
+
+force_cast: error
+force_try: error
+
+type_body_length:
+  warning: 200
+  error: 300
+
+file_length:
+  warning: 400
+  error: 500
+
+large_tuple:
+  warning: 3
+
+type_name:
+  min_length: 3 # only warning
+
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
