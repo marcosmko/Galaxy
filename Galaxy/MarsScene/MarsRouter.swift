@@ -8,10 +8,13 @@
 
 import Foundation
 
+protocol MarsRouting: class {
+}
+
 protocol MarsRouterProtocol {
     
 }
 
-class MarsRouter: MarsRouterProtocol {
+class MarsRouter: MarsRouterProtocol, MarsRouting {
     weak var viewController: MarsViewController?
 }
