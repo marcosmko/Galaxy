@@ -8,6 +8,28 @@
 
 import Foundation
 
+class Request {
+    let method: RequestMethod
+    let domain: String
+    let endpoint: String
+    let parameters: [String: String]
+    let data: Data?
+    
+    static func get(domain: String, endpoint: String, parameters: [String: String]) -> Request {
+        return Request(method: .get,
+                       domain: domain, endpoint: endpoint, parameters: parameters)
+    }
+    
+    private init(method: RequestMethod, domain: String, endpoint: String, parameters: [String: String]) {
+        self.method = method
+        self.domain = domain
+        self.endpoint = endpoint
+        self.parameters = parameters
+        self.data = nil
+    }
+    
+}
+
 /// The request method, based on HTTP methods.
 public enum RequestMethod : String {
     /// Delete method, used to delete information.
@@ -23,44 +45,60 @@ public enum RequestMethod : String {
     case post = "POST"
 }
 
+enum APIError: Error {
+    case malformedURL
+    case error(httpCode: Int, payload: Data?)
+}
 
 class API {
     
-    private static func createRequest(method: RequestMethod, url: URL, data: Data?) -> URLRequest {
-        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 120)
-        
-        request.httpShouldHandleCookies = false
-        request.httpShouldUsePipelining = true
-        request.httpMethod = method.rawValue
-        
-        if let data = data {
-            request.httpBody = data
-            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+    private static func create(request: Request, data: Data?) throws -> URLRequest {
+        guard let url = URL(string: "\(request.domain)\(request.endpoint)") else {
+            throw APIError.malformedURL
         }
         
-        return request
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            throw APIError.malformedURL
+        }
+        
+        var queryItems: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "khGhC8CtxrfEZa3ZQHN2XeSbDQ3kWIBEeFAjtRDn")]
+        for parameter in request.parameters {
+            queryItems.append(URLQueryItem(name: parameter.key, value: parameter.value))
+        }
+        components.queryItems = queryItems
+        
+        guard let urlWithComponents = components.url else {
+            throw APIError.malformedURL
+        }
+        var urlRequest = URLRequest(url: urlWithComponents, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 120)
+        urlRequest.httpShouldHandleCookies = false
+        urlRequest.httpShouldUsePipelining = true
+        urlRequest.httpMethod = request.method.rawValue
+        
+        if let data = data {
+            urlRequest.httpBody = data
+            urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        }
+        
+        return urlRequest
     }
     
-    public func request<T: Codable>(method: RequestMethod, url: String, data: Data? = nil) throws -> T {
-        let data: Data = try self.request(method: method, url: url, data: data)
-        
+    public func request<T: Codable>(request: Request, data: Data? = nil) throws -> T {
+        let data: Data = try self.request(request: request, data: data)
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(T.self, from: data)
     }
     
-    public func request(method: RequestMethod, url: String, data: Data? = nil) throws -> Data {
-        guard let url = URL(string: url) else {
-            fatalError()
-        }
-        
-        let urlRequest: URLRequest = API.createRequest(method: method, url: url, data: data)
+    public func request(request: Request, data: Data? = nil) throws -> Data {
+        let urlRequest: URLRequest = try API.create(request: request, data: data)
         let (data, response, error) = API.process(request: urlRequest)
         
         if let response = response {
             if 200 <= response.statusCode && response.statusCode < 300, let data: Data = data {
                 return data
             } else {
-                fatalError()
+                throw APIError.error(httpCode: response.statusCode, payload: data)
             }
         }
         
