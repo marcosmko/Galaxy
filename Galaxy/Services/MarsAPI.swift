@@ -8,8 +8,6 @@
 
 import Foundation
 
-var APIKEY: String = "khGhC8CtxrfEZa3ZQHN2XeSbDQ3kWIBEeFAjtRDn"
-
 class MarsAPI: API, MarsStoreProtocol {
     
     func fetchPhotos() -> (() throws -> [Photo]) {
@@ -18,7 +16,7 @@ class MarsAPI: API, MarsStoreProtocol {
                 let photos: [Photo]
             }
             
-            let photos: Photos = try self.request(method: RequestMethod.get, url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=\(APIKEY)")
+            let photos: Photos = try self.request(request: Request.get(domain: "https://api.nasa.gov/", endpoint: "mars-photos/api/v1/rovers/curiosity/photos", parameters: ["earth_date": "2015-6-3"]))
             return photos.photos
         }
     }
