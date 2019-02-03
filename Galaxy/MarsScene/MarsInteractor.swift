@@ -26,12 +26,28 @@ class MarsInteractor: MarsInteractorProtocol {
         
         DispatchQueue.global().async {
             do {
-                self.photos = try self.marsWorker.fetchPhotos(rover: request.rover)
-                let response = Mars.FetchPhotos.Response(photos: self.photos)
+                // clean screen while we are fetching photos
+                DispatchQueue.main.sync {
+                    let response = Mars.FetchPhotos.Response(photos: [])
+                    self.presenter?.presentFetchedOrders(response: response)
+                }
                 
-                DispatchQueue.main.async {
-                    // check if we should display fetched rover
+                // this could run for some time
+                var photos: [Photo] = []
+                var date: Date = Date()
+                while photos.isEmpty {
                     guard self.requestID == requestID else { return }
+                    photos = try self.marsWorker.fetchPhotos(rover: request.rover, date: date)
+                    
+                    // one month before
+                    date.addTimeInterval(-30*24*60*60)
+                }
+                let response = Mars.FetchPhotos.Response(photos: photos)
+                
+                // check if we are still with the same request
+                guard self.requestID == requestID else { return }
+                self.photos = photos
+                DispatchQueue.main.sync {
                     self.presenter?.presentFetchedOrders(response: response)
                 }
             } catch {

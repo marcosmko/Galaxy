@@ -15,13 +15,13 @@ class MarsWorker {
         self.marsStore = marsStore
     }
     
-    func fetchPhotos(rover: MarsRover) throws -> [Photo] {
-        return try marsStore.fetchPhotos()(rover)
+    func fetchPhotos(rover: MarsRover, date: Date) throws -> [Photo] {
+        return try marsStore.fetchPhotos()(rover, date)
     }
 }
 
 // MARK: - Orders store API
 
 protocol MarsStoreProtocol {
-    func fetchPhotos() -> ((_ rover: MarsRover) throws -> [Photo])
+    func fetchPhotos() -> ((_ rover: MarsRover, _ date: Date) throws -> [Photo])
 }
