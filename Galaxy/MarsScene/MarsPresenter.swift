@@ -17,7 +17,8 @@ class MarsPresenter: MarsPresenterProtocol {
     func presentFetchedOrders(response: Mars.FetchPhotos.Response) {
         var displayedPhotos: [Mars.FetchPhotos.ViewModel.DisplayedPhoto] = []
         for photo in response.photos {
-            let displayedPhoto = Mars.FetchPhotos.ViewModel.DisplayedPhoto()
+            guard let image = photo.imgSrc else { continue }
+            let displayedPhoto = Mars.FetchPhotos.ViewModel.DisplayedPhoto(image: image)
             displayedPhotos.append(displayedPhoto)
         }
         let viewModel = Mars.FetchPhotos.ViewModel(displayedPhotos: displayedPhotos)

@@ -56,10 +56,11 @@ extension MarsViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? ImageCell else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = UIColor.black
+        let viewModel = self.displayedPhotos[indexPath.row]
+        cell.prepare(viewModel: viewModel)
         
         return cell
     }

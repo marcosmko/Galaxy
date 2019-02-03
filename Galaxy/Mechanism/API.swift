@@ -15,9 +15,18 @@ class Request {
     let parameters: [String: String]
     let data: Data?
     
-    static func get(domain: String, endpoint: String, parameters: [String: String]) -> Request {
+    static func get(domain: String, endpoint: String, parameters: [String: String] = [:]) -> Request {
         return Request(method: .get,
-                       domain: domain, endpoint: endpoint, parameters: parameters)
+                       domain: domain,
+                       endpoint: endpoint,
+                       parameters: parameters)
+    }
+    
+    static func get(path: String, parameters: [String: String] = [:]) -> Request {
+        return Request(method: .get,
+                       domain: path,
+                       endpoint: "",
+                       parameters: parameters)
     }
     
     private init(method: RequestMethod, domain: String, endpoint: String, parameters: [String: String]) {
@@ -83,14 +92,14 @@ class API {
         return urlRequest
     }
     
-    public func request<T: Codable>(request: Request, data: Data? = nil) throws -> T {
+    public static func request<T: Codable>(request: Request, data: Data? = nil) throws -> T {
         let data: Data = try self.request(request: request, data: data)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(T.self, from: data)
     }
     
-    public func request(request: Request, data: Data? = nil) throws -> Data {
+    public static func request(request: Request, data: Data? = nil) throws -> Data {
         let urlRequest: URLRequest = try API.create(request: request, data: data)
         let (data, response, error) = API.process(request: urlRequest)
         
