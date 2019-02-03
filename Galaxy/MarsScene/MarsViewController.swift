@@ -8,10 +8,16 @@
 
 import UIKit
 
-class MarsViewController: UIViewController {
+protocol MarsDisplayLogic: class {
+    func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel)
+}
+
+class MarsViewController: UIViewController, MarsDisplayLogic {
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var interactor: MarsInteractorProtocol?
     var router: MarsRouterProtocol?
-    var items: [Int] = [0]
+    var displayedPhotos: [Mars.FetchPhotos.ViewModel.DisplayedPhoto] = []
     
     private func setup() {
         let viewController = self
@@ -36,22 +42,34 @@ class MarsViewController: UIViewController {
         self.interactor?.fetchPhotos(request: Mars.FetchPhotos.Request())
     }
     
+    func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel) {
+        self.displayedPhotos = viewModel.displayedPhotos
+        self.collectionView.reloadData()
+    }
+    
 }
 
 extension MarsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return displayedPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.backgroundColor = UIColor.black
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width/2
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
+            return CGSize.zero
+        }
+        
+        let width = (UIScreen.main.bounds.width - flowLayout.minimumInteritemSpacing - flowLayout.sectionInset.left - flowLayout.sectionInset.right) / 2
         return CGSize(width: width, height: width)
     }
     

@@ -13,17 +13,17 @@ enum Mars {
     enum FetchPhotos {
         struct Request { }
         struct Response {
-//            var orders: [Order]
+            var photos: [Photo]
         }
         struct ViewModel {
-//            struct DisplayedOrder {
+            struct DisplayedPhoto {
 //                var id: String
 //                var date: String
 //                var email: String
 //                var name: String
 //                var total: String
-//            }
-//            var displayedOrders: [DisplayedOrder]
+            }
+            var displayedPhotos: [DisplayedPhoto]
         }
     }
     
