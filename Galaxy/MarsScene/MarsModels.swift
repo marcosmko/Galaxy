@@ -17,7 +17,7 @@ enum Mars {
         }
         struct ViewModel {
             struct DisplayedPhoto {
-//                var id: String
+                var image: String
 //                var date: String
 //                var email: String
 //                var name: String

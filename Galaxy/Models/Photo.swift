@@ -9,5 +9,5 @@
 import Foundation
 
 class Photo: Codable {
-    
+    var imgSrc: String?
 }

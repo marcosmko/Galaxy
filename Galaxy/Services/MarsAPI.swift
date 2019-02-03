@@ -16,7 +16,7 @@ class MarsAPI: API, MarsStoreProtocol {
                 let photos: [Photo]
             }
             
-            let photos: Photos = try self.request(request: Request.get(domain: "https://api.nasa.gov/", endpoint: "mars-photos/api/v1/rovers/curiosity/photos", parameters: ["earth_date": "2015-6-3"]))
+            let photos: Photos = try API.request(request: Request.get(domain: "https://api.nasa.gov/", endpoint: "mars-photos/api/v1/rovers/curiosity/photos", parameters: ["earth_date": "2015-6-3"]))
             return photos.photos
         }
     }

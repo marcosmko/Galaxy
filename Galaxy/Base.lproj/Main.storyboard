@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dvH-go-iWE">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dvH-go-iWE" customClass="ImageCell" customModule="Galaxy" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="171" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -46,6 +46,9 @@
                                             <constraint firstAttribute="bottom" secondItem="uos-j5-Rzn" secondAttribute="bottom" id="hKA-O7-mo0"/>
                                             <constraint firstItem="uos-j5-Rzn" firstAttribute="leading" secondItem="dvH-go-iWE" secondAttribute="leading" id="hh5-y0-nyS"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="uos-j5-Rzn" id="gpz-fQ-aFl"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
