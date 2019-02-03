@@ -17,14 +17,21 @@ class MarsInteractor: MarsInteractorProtocol {
     var marsWorker = MarsWorker(marsStore: MarsAPI())
     
     var photos: [Photo] = []
+    private var requestID: UInt = 0
     
     func fetchPhotos(request: Mars.FetchPhotos.Request) {
+        // we should display only last request
+        let requestID: UInt = UInt.random(in: 0..<UInt.max)
+        self.requestID = requestID
+        
         DispatchQueue.global().async {
             do {
                 self.photos = try self.marsWorker.fetchPhotos(rover: request.rover)
                 let response = Mars.FetchPhotos.Response(photos: self.photos)
                 
                 DispatchQueue.main.async {
+                    // check if we should display fetched rover
+                    guard self.requestID == requestID else { return }
                     self.presenter?.presentFetchedOrders(response: response)
                 }
             } catch {
