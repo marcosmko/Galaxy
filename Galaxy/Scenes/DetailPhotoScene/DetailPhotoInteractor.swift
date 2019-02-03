@@ -9,7 +9,8 @@
 import Foundation
 
 protocol DetailPhotoInteractorProtocol {
-    func getPhoto(request: DetailPhoto.GetPhoto.Request)
+    func get(request: DetailPhoto.GetPhoto.Request)
+    func get(request: DetailPhoto.GetName.Request)
 }
 
 protocol DetailPhotoDataStore {
@@ -20,12 +21,23 @@ class DetailPhotoInteractor: DetailPhotoInteractorProtocol, DetailPhotoDataStore
     var presenter: DetailPhotoPresenterProtocol?
     var photo: Photo!
     
+    private var fullName: Bool = true
+    
     // MARK: - Fetch order
     
-    func getPhoto(request: DetailPhoto.GetPhoto.Request) {
+    func get(request: DetailPhoto.GetPhoto.Request) {
         DispatchQueue.global().async {
             let response = DetailPhoto.GetPhoto.Response(photo: self.photo)
-            self.presenter?.presentPhoto(response: response)
+            self.presenter?.present(response: response)
+        }
+    }
+    
+    func get(request: DetailPhoto.GetName.Request) {
+        DispatchQueue.global().async {
+            self.fullName.toggle()
+            let name: String = (self.fullName ? self.photo.camera?.fullName : self.photo.camera?.name) ?? ""
+            let response = DetailPhoto.GetName.Response(name: name)
+            self.presenter?.present(response: response)
         }
     }
     

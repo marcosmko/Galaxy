@@ -9,21 +9,33 @@
 import Foundation
 
 protocol DetailPhotoPresenterProtocol {
-    func presentPhoto(response: DetailPhoto.GetPhoto.Response)
+    func present(response: DetailPhoto.GetPhoto.Response)
+    func present(response: DetailPhoto.GetName.Response)
 }
 
 class DetailPhotoPresenter: DetailPhotoPresenterProtocol {
     weak var viewController: DetailPhotoDisplayLogic?
     
-    func presentPhoto(response: DetailPhoto.GetPhoto.Response) {
-        let photo = response.photo
-        
-        guard let image = photo.imgSrc else {
-            return
+    func present(response: DetailPhoto.GetPhoto.Response) {
+        DispatchQueue.main.async {
+            let photo = response.photo
+            
+            guard let image = photo.imgSrc else {
+                return
+            }
+            
+            let displayedPhoto = DetailPhoto.GetPhoto.ViewModel.DisplayedPhoto(image: image)
+            let viewModel = DetailPhoto.GetPhoto.ViewModel(displayedPhoto: displayedPhoto)
+            self.viewController?.display(viewModel: viewModel)
         }
-        
-        let displayedPhoto = DetailPhoto.GetPhoto.DisplayedPhotoViewModel.DisplayedPhoto(image: image)
-        let viewModel = DetailPhoto.GetPhoto.DisplayedPhotoViewModel(displayedPhoto: displayedPhoto)
-        viewController?.displayPhoto(viewModel: viewModel)
+    }
+    
+    func present(response: DetailPhoto.GetName.Response) {
+        DispatchQueue.main.async {
+            let photo = response.name
+            let displayedName = DetailPhoto.GetName.ViewModel.DisplayedName(camera: photo)
+            let viewModel = DetailPhoto.GetName.ViewModel(displayedPhoto: displayedName)
+            self.viewController?.display(viewModel: viewModel)
+        }
     }
 }

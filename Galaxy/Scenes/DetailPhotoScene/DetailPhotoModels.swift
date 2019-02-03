@@ -16,13 +16,21 @@ enum DetailPhoto {
         struct Response {
             let photo: Photo
         }
-        struct DisplayedPhotoViewModel {
+        struct ViewModel {
             struct DisplayedPhoto {
                 let image: String
             }
             let displayedPhoto: DisplayedPhoto
         }
-        struct DisplayedNameViewModel {
+    }
+    
+    enum GetName {
+        struct Request {
+        }
+        struct Response {
+            let name: String
+        }
+        struct ViewModel {
             struct DisplayedName {
                 let camera: String
             }
