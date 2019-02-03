@@ -31,6 +31,7 @@
 		F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */; };
 		F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */; };
 		F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC71220787F500673513 /* DetailPhotoModels.swift */; };
+		F7CCAC742207917000673513 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC732207917000673513 /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoPresenter.swift; sourceTree = "<group>"; };
 		F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoRouter.swift; sourceTree = "<group>"; };
 		F7CCAC71220787F500673513 /* DetailPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoModels.swift; sourceTree = "<group>"; };
+		F7CCAC732207917000673513 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F709E40B22060CCA00F7F248 /* Photo.swift */,
+				F7CCAC732207917000673513 /* Camera.swift */,
 				F7CCAC62220770E500673513 /* MarsRover.swift */,
 			);
 			path = Models;
@@ -403,6 +406,7 @@
 				F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */,
 				F7CCAC612207669A00673513 /* Media.swift in Sources */,
 				F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */,
+				F7CCAC742207917000673513 /* Camera.swift in Sources */,
 				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
 				F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */,
 				F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */,

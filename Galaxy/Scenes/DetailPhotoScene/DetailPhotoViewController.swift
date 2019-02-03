@@ -9,10 +9,14 @@
 import UIKit
 
 protocol DetailPhotoDisplayLogic: class {
-    func displayPhoto(viewModel: DetailPhoto.GetPhoto.ViewModel)
+    func displayPhoto(viewModel: DetailPhoto.GetPhoto.DisplayedPhotoViewModel)
+    func displayName(viewModel: DetailPhoto.GetPhoto.DisplayedNameViewModel)
 }
 
 class DetailPhotoViewController: UIViewController, DetailPhotoDisplayLogic {
+    
+    @IBOutlet private var cameraNameButton: UIButton!
+    @IBOutlet private var imageView: UIImageView!
     
     var interactor: DetailPhotoInteractorProtocol?
     var router: DetailPhotoRouterProtocol?
@@ -39,8 +43,17 @@ class DetailPhotoViewController: UIViewController, DetailPhotoDisplayLogic {
         self.setup()
     }
     
-    func displayPhoto(viewModel: DetailPhoto.GetPhoto.ViewModel) {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.interactor?.getPhoto(request: DetailPhoto.GetPhoto.Request())
+    }
+    
+    func displayPhoto(viewModel: DetailPhoto.GetPhoto.DisplayedPhotoViewModel) {
+        Media.download(path: viewModel.displayedPhoto.image, imageView: self.imageView)
+    }
+    
+    func displayName(viewModel: DetailPhoto.GetPhoto.DisplayedNameViewModel) {
+        self.cameraNameButton.setTitle(viewModel.displayedPhoto.camera, for: .normal)
     }
     
 }

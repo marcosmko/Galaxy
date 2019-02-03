@@ -51,7 +51,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="171" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uos-j5-Rzn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uos-j5-Rzn">
                                                     <rect key="frame" x="0.0" y="0.0" width="171" height="158"/>
                                                 </imageView>
                                             </subviews>
@@ -114,13 +114,37 @@
                     <view key="view" contentMode="scaleToFill" id="tVz-J7-Pvf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-Au-3IR">
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDx-wQ-lgT">
+                                <rect key="frame" x="10" y="74" width="355" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="giA-6h-BSE" firstAttribute="trailing" secondItem="5qu-Au-3IR" secondAttribute="trailing" id="7MO-Qa-LpQ"/>
+                            <constraint firstItem="giA-6h-BSE" firstAttribute="bottom" secondItem="5qu-Au-3IR" secondAttribute="bottom" id="aYm-jd-XRt"/>
+                            <constraint firstItem="giA-6h-BSE" firstAttribute="trailing" secondItem="zDx-wQ-lgT" secondAttribute="trailing" constant="10" id="eiH-2G-tUI"/>
+                            <constraint firstItem="zDx-wQ-lgT" firstAttribute="leading" secondItem="giA-6h-BSE" secondAttribute="leading" constant="10" id="oJg-y7-NWJ"/>
+                            <constraint firstItem="5qu-Au-3IR" firstAttribute="top" secondItem="zDx-wQ-lgT" secondAttribute="bottom" constant="10" id="r5e-lT-gYN"/>
+                            <constraint firstItem="5qu-Au-3IR" firstAttribute="leading" secondItem="giA-6h-BSE" secondAttribute="leading" id="vcP-83-Ics"/>
+                            <constraint firstItem="zDx-wQ-lgT" firstAttribute="top" secondItem="giA-6h-BSE" secondAttribute="top" constant="10" id="xzy-OI-wbr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="giA-6h-BSE"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraNameButton" destination="zDx-wQ-lgT" id="SWv-Oi-iqO"/>
+                        <outlet property="imageView" destination="5qu-Au-3IR" id="Dpv-m7-TC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xf9-6j-pHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="27"/>
+            <point key="canvasLocation" x="933.60000000000002" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
