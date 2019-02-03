@@ -12,13 +12,23 @@ import UIKit.UIImageView
 
 class Media {
     
+    private static var associated: [UIImageView: String] = [:]
+    
     static func download(path: String, imageView: UIImageView) {
         DispatchQueue.global().async {
-            guard let data: Data = try? API.request(request: Request.get(path: path)) else {
-                return
+            self.associated[imageView] = path
+            var image: UIImage?
+            do {
+                let data: Data = try API.request(request: Request.get(path: path))
+                image = UIImage(data: data)
+            } catch {
             }
-            DispatchQueue.main.async {
-                imageView.image = UIImage(data: data)
+            
+            if self.associated[imageView] == path {
+                self.associated[imageView] = nil
+                DispatchQueue.main.async {
+                    imageView.image = image
+                }
             }
         }
     }

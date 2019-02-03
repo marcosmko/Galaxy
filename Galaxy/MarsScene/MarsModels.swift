@@ -11,19 +11,21 @@ import Foundation
 enum Mars {
     
     enum FetchPhotos {
-        struct Request { }
+        struct Request {
+            let rover: MarsRover
+        }
         struct Response {
-            var photos: [Photo]
+            let photos: [Photo]
         }
         struct ViewModel {
             struct DisplayedPhoto {
-                var image: String
+                let image: String
 //                var date: String
 //                var email: String
 //                var name: String
 //                var total: String
             }
-            var displayedPhotos: [DisplayedPhoto]
+            let displayedPhotos: [DisplayedPhoto]
         }
     }
     
