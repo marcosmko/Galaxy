@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MarsInteractorProtocol {
-    func fetchPhotos(request: Mars.FetchPhotos.Request)
+    func fetch(request: Mars.FetchPhotos.Request)
 }
 
 protocol MarsDataStore {
@@ -23,7 +23,7 @@ class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
     var photos: [Photo] = []
     private var requestID: UInt = 0
     
-    func fetchPhotos(request: Mars.FetchPhotos.Request) {
+    func fetch(request: Mars.FetchPhotos.Request) {
         // we should display only last request
         let requestID: UInt = UInt.random(in: 0..<UInt.max)
         self.requestID = requestID
@@ -31,10 +31,7 @@ class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
         DispatchQueue.global().async {
             do {
                 // clean screen while we are fetching photos
-                DispatchQueue.main.sync {
-                    let response = Mars.FetchPhotos.Response(photos: [])
-                    self.presenter?.presentFetchedOrders(response: response)
-                }
+                self.presenter?.present(response: Mars.FetchPhotos.Response(photos: []))
                 
                 // this could run for some time
                 var photos: [Photo] = []
@@ -51,9 +48,7 @@ class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
                 // check if we are still with the same request
                 guard self.requestID == requestID else { return }
                 self.photos = photos
-                DispatchQueue.main.sync {
-                    self.presenter?.presentFetchedOrders(response: response)
-                }
+                self.presenter?.present(response: response)
             } catch {
                 // show error
                 print(error.localizedDescription)

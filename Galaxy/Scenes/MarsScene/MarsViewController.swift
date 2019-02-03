@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MarsDisplayLogic: class {
-    func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel)
+    func display(viewModel: Mars.FetchPhotos.ViewModel)
 }
 
 class MarsViewController: UIViewController, MarsDisplayLogic {
@@ -58,10 +58,10 @@ class MarsViewController: UIViewController, MarsDisplayLogic {
         case 2: rover = .spirit
         default: rover = .curiosity
         }
-        self.interactor?.fetchPhotos(request: Mars.FetchPhotos.Request(rover: rover))
+        self.interactor?.fetch(request: Mars.FetchPhotos.Request(rover: rover))
     }
     
-    func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel) {
+    func display(viewModel: Mars.FetchPhotos.ViewModel) {
         self.displayedPhotos = viewModel.displayedPhotos
         self.collectionView.reloadData()
     }
