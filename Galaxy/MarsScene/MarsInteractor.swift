@@ -21,7 +21,7 @@ class MarsInteractor: MarsInteractorProtocol {
     func fetchPhotos(request: Mars.FetchPhotos.Request) {
         DispatchQueue.global().async {
             do {
-                self.photos = try self.marsWorker.fetchPhotos()
+                self.photos = try self.marsWorker.fetchPhotos(rover: request.rover)
                 let response = Mars.FetchPhotos.Response(photos: self.photos)
                 
                 DispatchQueue.main.async {

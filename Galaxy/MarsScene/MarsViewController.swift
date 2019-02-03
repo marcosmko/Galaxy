@@ -13,7 +13,8 @@ protocol MarsDisplayLogic: class {
 }
 
 class MarsViewController: UIViewController, MarsDisplayLogic {
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var segmentedControl: UISegmentedControl!
     
     var interactor: MarsInteractorProtocol?
     var router: MarsRouterProtocol?
@@ -38,8 +39,18 @@ class MarsViewController: UIViewController, MarsDisplayLogic {
         self.fetchPhotos()
     }
     
+    @IBAction private func segmentValueChanged(_ sender: Any) {
+        self.fetchPhotos()
+    }
+    
     private func fetchPhotos() {
-        self.interactor?.fetchPhotos(request: Mars.FetchPhotos.Request())
+        let rover: MarsRover
+        switch self.segmentedControl.selectedSegmentIndex {
+        case 1: rover = .opportunity
+        case 2: rover = .spirit
+        default: rover = .curiosity
+        }
+        self.interactor?.fetchPhotos(request: Mars.FetchPhotos.Request(rover: rover))
     }
     
     func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel) {

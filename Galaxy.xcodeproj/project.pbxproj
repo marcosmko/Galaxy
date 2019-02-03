@@ -25,6 +25,7 @@
 		F709E4122206145A00F7F248 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E4112206145A00F7F248 /* API.swift */; };
 		F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC5E220765DA00673513 /* ImageCell.swift */; };
 		F7CCAC612207669A00673513 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC602207669A00673513 /* Media.swift */; };
+		F7CCAC63220770E500673513 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC62220770E500673513 /* MarsRover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F709E4112206145A00F7F248 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F7CCAC5E220765DA00673513 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		F7CCAC602207669A00673513 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		F7CCAC62220770E500673513 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F709E40B22060CCA00F7F248 /* Photo.swift */,
+				F7CCAC62220770E500673513 /* MarsRover.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
 				F709E40C22060CCA00F7F248 /* Photo.swift in Sources */,
 				F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */,
+				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
 				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
 				F709E402220609FD00F7F248 /* Extension.swift in Sources */,
