@@ -9,6 +9,7 @@
 import Foundation
 
 protocol DetailPhotoInteractorProtocol {
+    func getPhoto(request: DetailPhoto.GetPhoto.Request)
 }
 
 protocol DetailPhotoDataStore {
@@ -21,7 +22,7 @@ class DetailPhotoInteractor: DetailPhotoInteractorProtocol, DetailPhotoDataStore
     
     // MARK: - Fetch order
     
-    func getOrder(request: DetailPhoto.GetPhoto.Request) {
+    func getPhoto(request: DetailPhoto.GetPhoto.Request) {
         DispatchQueue.global().async {
             let response = DetailPhoto.GetPhoto.Response(photo: self.photo)
             self.presenter?.presentPhoto(response: response)

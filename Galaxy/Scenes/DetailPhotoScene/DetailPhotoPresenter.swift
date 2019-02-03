@@ -22,8 +22,8 @@ class DetailPhotoPresenter: DetailPhotoPresenterProtocol {
             return
         }
         
-        let displayedPhoto = DetailPhoto.GetPhoto.ViewModel.DisplayedPhoto(image: image)
-        let viewModel = DetailPhoto.GetPhoto.ViewModel(displayedPhoto: displayedPhoto)
+        let displayedPhoto = DetailPhoto.GetPhoto.DisplayedPhotoViewModel.DisplayedPhoto(image: image)
+        let viewModel = DetailPhoto.GetPhoto.DisplayedPhotoViewModel(displayedPhoto: displayedPhoto)
         viewController?.displayPhoto(viewModel: viewModel)
     }
 }
