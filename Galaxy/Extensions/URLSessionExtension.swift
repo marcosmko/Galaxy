@@ -1,5 +1,5 @@
 //
-//  Extension.swift
+//  URLSessionExtension.swift
 //  Galaxy
 //
 //  Created by Marcos Kobuchi on 02/02/19.

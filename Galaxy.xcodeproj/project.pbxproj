@@ -17,7 +17,7 @@
 		F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FA2206059700F7F248 /* MarsInteractor.swift */; };
 		F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FC220605A000F7F248 /* MarsRouter.swift */; };
 		F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FE220605AB00F7F248 /* MarsPresenter.swift */; };
-		F709E402220609FD00F7F248 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E401220609FD00F7F248 /* Extension.swift */; };
+		F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E401220609FD00F7F248 /* URLSessionExtension.swift */; };
 		F709E40522060A9900F7F248 /* MarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40422060A9900F7F248 /* MarsModels.swift */; };
 		F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40822060B2800F7F248 /* MarsWorker.swift */; };
 		F709E40C22060CCA00F7F248 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40B22060CCA00F7F248 /* Photo.swift */; };
@@ -62,7 +62,7 @@
 		F709E3FA2206059700F7F248 /* MarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsInteractor.swift; sourceTree = "<group>"; };
 		F709E3FC220605A000F7F248 /* MarsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRouter.swift; sourceTree = "<group>"; };
 		F709E3FE220605AB00F7F248 /* MarsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPresenter.swift; sourceTree = "<group>"; };
-		F709E401220609FD00F7F248 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F709E401220609FD00F7F248 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		F709E40422060A9900F7F248 /* MarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsModels.swift; sourceTree = "<group>"; };
 		F709E40822060B2800F7F248 /* MarsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWorker.swift; sourceTree = "<group>"; };
 		F709E40B22060CCA00F7F248 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -125,13 +125,12 @@
 				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
 				F709E3F72206004600F7F248 /* Resources */,
 				F709E40A22060CBB00F7F248 /* Models */,
-				F709E400220605B300F7F248 /* MarsScene */,
-				F709E40D22060D2D00F7F248 /* Services */,
+				F7CCAC642207808500673513 /* Scenes */,
 				F709E40722060B0D00F7F248 /* Workers */,
+				F709E40D22060D2D00F7F248 /* Services */,
 				F709E3C62205FB2400F7F248 /* Main.storyboard */,
-				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
-				F7CCAC5E220765DA00673513 /* ImageCell.swift */,
-				F709E401220609FD00F7F248 /* Extension.swift */,
+				F7CCAC652207809B00673513 /* Views */,
+				F7CCAC66220780A300673513 /* Extensions */,
 			);
 			path = Galaxy;
 			sourceTree = "<group>";
@@ -159,6 +158,7 @@
 			children = (
 				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
 				F709E3CE2205FB2600F7F248 /* Info.plist */,
+				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +207,30 @@
 				F7CCAC602207669A00673513 /* Media.swift */,
 			);
 			path = Mechanism;
+			sourceTree = "<group>";
+		};
+		F7CCAC642207808500673513 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F709E400220605B300F7F248 /* MarsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F7CCAC652207809B00673513 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7CCAC5E220765DA00673513 /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CCAC66220780A300673513 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F709E401220609FD00F7F248 /* URLSessionExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +373,7 @@
 				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
 				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
-				F709E402220609FD00F7F248 /* Extension.swift in Sources */,
+				F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */,
 				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
 				F7CCAC612207669A00673513 /* Media.swift in Sources */,
 				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,

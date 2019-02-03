@@ -20,10 +20,6 @@ enum Mars {
         struct ViewModel {
             struct DisplayedPhoto {
                 let image: String
-//                var date: String
-//                var email: String
-//                var name: String
-//                var total: String
             }
             let displayedPhotos: [DisplayedPhoto]
         }
