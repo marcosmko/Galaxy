@@ -7,14 +7,31 @@
 //
 
 import Foundation
+import UIKit.UIStoryboardSegue
 
+@objc
 protocol MarsRouting: class {
+    func routeToShowDetail(segue: UIStoryboardSegue, sender: Any?)
 }
 
-protocol MarsRouterProtocol {
+protocol MarsRouterProtocol: NSObjectProtocol {
+    var dataStore: MarsDataStore? { get }
+}
+
+class MarsRouter: NSObject, MarsRouterProtocol, MarsRouting {
+    var dataStore: MarsDataStore?
     
-}
+    func routeToShowDetail(segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailPhotoViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToShowDetail(source: dataStore!, destination: &destinationDS, sender: sender)
+    }
+    
+    // MARK: Passing data
+    
+    func passDataToShowDetail(source: MarsDataStore, destination: inout DetailPhotoDataStore, sender: Any?) {
+        guard let item: Int = sender as? Int else { return }
+        destination.photo = source.photos[item]
+    }
 
-class MarsRouter: MarsRouterProtocol, MarsRouting {
-    weak var viewController: MarsViewController?
 }

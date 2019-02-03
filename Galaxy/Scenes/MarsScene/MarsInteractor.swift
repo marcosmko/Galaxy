@@ -12,7 +12,11 @@ protocol MarsInteractorProtocol {
     func fetchPhotos(request: Mars.FetchPhotos.Request)
 }
 
-class MarsInteractor: MarsInteractorProtocol {
+protocol MarsDataStore {
+    var photos: [Photo] { get }
+}
+
+class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
     var presenter: MarsPresenterProtocol?
     var marsWorker = MarsWorker(marsStore: MarsAPI())
     

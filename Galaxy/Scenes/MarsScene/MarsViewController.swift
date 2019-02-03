@@ -29,12 +29,21 @@ class MarsViewController: UIViewController, MarsDisplayLogic {
         viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
-        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setup()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setup()
         self.fetchPhotos()
     }
     
@@ -55,6 +64,14 @@ class MarsViewController: UIViewController, MarsDisplayLogic {
     func displayFetchedPhotos(viewModel: Mars.FetchPhotos.ViewModel) {
         self.displayedPhotos = viewModel.displayedPhotos
         self.collectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let router = self.router, let identifier = segue.identifier else { return }
+        let selector = NSSelectorFromString("routeTo\(identifier)WithSegue:sender:")
+        if router.responds(to: selector) {
+            router.perform(selector, with: segue, with: sender)
+        }
     }
     
 }
@@ -82,6 +99,10 @@ extension MarsViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         let width = (UIScreen.main.bounds.width - flowLayout.minimumInteritemSpacing - flowLayout.sectionInset.left - flowLayout.sectionInset.right) / 2
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowDetail", sender: indexPath.row)
     }
     
 }

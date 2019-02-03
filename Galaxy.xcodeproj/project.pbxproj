@@ -26,6 +26,11 @@
 		F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC5E220765DA00673513 /* ImageCell.swift */; };
 		F7CCAC612207669A00673513 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC602207669A00673513 /* Media.swift */; };
 		F7CCAC63220770E500673513 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC62220770E500673513 /* MarsRover.swift */; };
+		F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */; };
+		F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */; };
+		F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */; };
+		F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */; };
+		F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC71220787F500673513 /* DetailPhotoModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		F7CCAC5E220765DA00673513 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		F7CCAC602207669A00673513 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		F7CCAC62220770E500673513 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
+		F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoInteractor.swift; sourceTree = "<group>"; };
+		F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoPresenter.swift; sourceTree = "<group>"; };
+		F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoRouter.swift; sourceTree = "<group>"; };
+		F7CCAC71220787F500673513 /* DetailPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,11 +176,11 @@
 		F709E400220605B300F7F248 /* MarsScene */ = {
 			isa = PBXGroup;
 			children = (
-				F709E3C42205FB2400F7F248 /* MarsViewController.swift */,
 				F709E3FA2206059700F7F248 /* MarsInteractor.swift */,
 				F709E40422060A9900F7F248 /* MarsModels.swift */,
-				F709E3FC220605A000F7F248 /* MarsRouter.swift */,
 				F709E3FE220605AB00F7F248 /* MarsPresenter.swift */,
+				F709E3FC220605A000F7F248 /* MarsRouter.swift */,
+				F709E3C42205FB2400F7F248 /* MarsViewController.swift */,
 			);
 			path = MarsScene;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				F709E400220605B300F7F248 /* MarsScene */,
+				F7CCAC6A220787BF00673513 /* DetailPhotoScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -231,6 +242,18 @@
 				F709E401220609FD00F7F248 /* URLSessionExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7CCAC6A220787BF00673513 /* DetailPhotoScene */ = {
+			isa = PBXGroup;
+			children = (
+				F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */,
+				F7CCAC71220787F500673513 /* DetailPhotoModels.swift */,
+				F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */,
+				F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */,
+				F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */,
+			);
+			path = DetailPhotoScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,17 +389,22 @@
 			files = (
 				F709E4122206145A00F7F248 /* API.swift in Sources */,
 				F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */,
+				F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */,
 				F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */,
 				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
 				F709E40C22060CCA00F7F248 /* Photo.swift in Sources */,
+				F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */,
 				F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */,
 				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
 				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
 				F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */,
 				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
+				F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */,
 				F7CCAC612207669A00673513 /* Media.swift in Sources */,
+				F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */,
 				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
+				F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */,
 				F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
