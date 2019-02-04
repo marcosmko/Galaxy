@@ -13,6 +13,7 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
     
     func prepare(viewModel: Mars.FetchPhotos.ViewModel.DisplayedPhoto) {
+        self.imageView.image = nil
         Media.download(path: viewModel.image, imageView: self.imageView)
     }
     

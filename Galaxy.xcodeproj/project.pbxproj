@@ -32,6 +32,13 @@
 		F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */; };
 		F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC71220787F500673513 /* DetailPhotoModels.swift */; };
 		F7CCAC742207917000673513 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC732207917000673513 /* Camera.swift */; };
+		F7E9BB1F2208693400AE4D24 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB1E2208693300AE4D24 /* Request.swift */; };
+		F7E9BB212208694E00AE4D24 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB202208694E00AE4D24 /* APIError.swift */; };
+		F7E9BB232208696C00AE4D24 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB222208696C00AE4D24 /* RequestMethod.swift */; };
+		F7E9BB2522086A3F00AE4D24 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */; };
+		F7E9BB2722086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */; };
+		F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */; };
+		F7E9BB2C22086E2000AE4D24 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2B22086E2000AE4D24 /* SHA1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,13 @@
 		F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoRouter.swift; sourceTree = "<group>"; };
 		F7CCAC71220787F500673513 /* DetailPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoModels.swift; sourceTree = "<group>"; };
 		F7CCAC732207917000673513 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		F7E9BB1E2208693300AE4D24 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F7E9BB202208694E00AE4D24 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F7E9BB222208696C00AE4D24 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFAbsoluteTimeExtension.swift; sourceTree = "<group>"; };
+		F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCache.swift; sourceTree = "<group>"; };
+		F7E9BB2B22086E2000AE4D24 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +147,8 @@
 		F709E3C12205FB2400F7F248 /* Galaxy */ = {
 			isa = PBXGroup;
 			children = (
-				F7CCAC772207A12100673513 /* Sources */,
 				F709E3F72206004600F7F248 /* Resources */,
+				F7CCAC772207A12100673513 /* Sources */,
 			);
 			path = Galaxy;
 			sourceTree = "<group>";
@@ -162,7 +176,6 @@
 			children = (
 				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
 				F709E3CE2205FB2600F7F248 /* Info.plist */,
-				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,19 +221,20 @@
 		F709E4102206144D00F7F248 /* Mechanism */ = {
 			isa = PBXGroup;
 			children = (
-				F709E4112206145A00F7F248 /* API.swift */,
+				F7E9BB1D2208692600AE4D24 /* API */,
 				F7CCAC602207669A00673513 /* Media.swift */,
 			);
 			path = Mechanism;
 			sourceTree = "<group>";
 		};
-		F7CCAC642207808500673513 /* Scenes */ = {
+		F7CCAC642207808500673513 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F709E400220605B300F7F248 /* MarsScene */,
-				F7CCAC6A220787BF00673513 /* DetailPhotoScene */,
+				F709E3C62205FB2400F7F248 /* Main.storyboard */,
+				F7CCAC652207809B00673513 /* Views */,
+				F7E9BB2822086AD300AE4D24 /* Scenes */,
 			);
-			path = Scenes;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		F7CCAC652207809B00673513 /* Views */ = {
@@ -234,6 +248,8 @@
 		F7CCAC66220780A300673513 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */,
+				F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */,
 				F709E401220609FD00F7F248 /* URLSessionExtension.swift */,
 			);
 			path = Extensions;
@@ -254,17 +270,46 @@
 		F7CCAC772207A12100673513 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F7E9BB1C220868FF00AE4D24 /* App */,
 				F709E4102206144D00F7F248 /* Mechanism */,
-				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
+				F7CCAC66220780A300673513 /* Extensions */,
 				F709E40A22060CBB00F7F248 /* Models */,
-				F7CCAC642207808500673513 /* Scenes */,
+				F7CCAC642207808500673513 /* Presentation */,
 				F709E40722060B0D00F7F248 /* Workers */,
 				F709E40D22060D2D00F7F248 /* Services */,
-				F709E3C62205FB2400F7F248 /* Main.storyboard */,
-				F7CCAC652207809B00673513 /* Views */,
-				F7CCAC66220780A300673513 /* Extensions */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F7E9BB1C220868FF00AE4D24 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
+				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F7E9BB1D2208692600AE4D24 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F709E4112206145A00F7F248 /* API.swift */,
+				F7E9BB202208694E00AE4D24 /* APIError.swift */,
+				F7E9BB1E2208693300AE4D24 /* Request.swift */,
+				F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */,
+				F7E9BB222208696C00AE4D24 /* RequestMethod.swift */,
+				F7E9BB2B22086E2000AE4D24 /* SHA1.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F7E9BB2822086AD300AE4D24 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F709E400220605B300F7F248 /* MarsScene */,
+				F7CCAC6A220787BF00673513 /* DetailPhotoScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,22 +468,29 @@
 				F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */,
 				F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */,
 				F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */,
+				F7E9BB1F2208693400AE4D24 /* Request.swift in Sources */,
 				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
+				F7E9BB2C22086E2000AE4D24 /* SHA1.swift in Sources */,
 				F709E40C22060CCA00F7F248 /* Photo.swift in Sources */,
 				F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */,
 				F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */,
 				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
+				F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */,
 				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
 				F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */,
+				F7E9BB2522086A3F00AE4D24 /* DataExtension.swift in Sources */,
+				F7E9BB232208696C00AE4D24 /* RequestMethod.swift in Sources */,
 				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
 				F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */,
 				F7CCAC612207669A00673513 /* Media.swift in Sources */,
 				F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */,
 				F7CCAC742207917000673513 /* Camera.swift in Sources */,
+				F7E9BB2722086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift in Sources */,
 				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
 				F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */,
 				F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */,
+				F7E9BB212208694E00AE4D24 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BGJ8NS22M;
 				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,6 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BGJ8NS22M;
 				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

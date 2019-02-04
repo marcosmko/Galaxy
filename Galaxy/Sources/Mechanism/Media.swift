@@ -13,23 +13,33 @@ import UIKit.UIImageView
 class Media {
     
     private static var associated: [UIImageView: String] = [:]
+    private static var lock: NSLock = NSLock()
     
     static func download(path: String, imageView: UIImageView) {
         DispatchQueue.global().async {
+            self.lock.lock()
             self.associated[imageView] = path
+            self.lock.unlock()
+            
             var image: UIImage?
             do {
-                let data: Data = try API.request(request: Request.get(path: path))
+                let data: Data = try API.download(request: Request.get(path: path, cache: true))
                 image = UIImage(data: data)
             } catch {
             }
             
+            self.lock.lock()
             if self.associated[imageView] == path {
                 self.associated[imageView] = nil
                 DispatchQueue.main.async {
                     imageView.image = image
+                    imageView.alpha = 0.0
+                    UIView.animate(withDuration: 0.5, animations: {
+                        imageView.alpha = 1.0
+                    })
                 }
             }
+            self.lock.unlock()
         }
     }
     

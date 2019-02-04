@@ -8,67 +8,14 @@
 
 import Foundation
 
-class Request {
-    let method: RequestMethod
-    let domain: String
-    let endpoint: String
-    let parameters: [String: String]
-    let data: Data?
-    
-    var url: URL?
-    static func get(domain: String, endpoint: String, parameters: [String: String] = [:]) -> Request {
-        return Request(method: .get,
-                       domain: domain,
-                       endpoint: endpoint,
-                       parameters: parameters)
-    }
-    
-    static func get(path: String, parameters: [String: String] = [:]) -> Request {
-        return Request(method: .get,
-                       domain: path,
-                       endpoint: "",
-                       parameters: parameters)
-    }
-    
-    private init(method: RequestMethod, domain: String, endpoint: String, parameters: [String: String]) {
-        self.method = method
-        self.domain = domain
-        self.endpoint = endpoint
-        self.parameters = parameters
-        self.data = nil
-    }
-    
-}
-
-/// The request method, based on HTTP methods.
-public enum RequestMethod: String {
-    /// Delete method, used to delete information.
-    case delete = "DELETE"
-    
-    /// Get method, used to return information.
-    case get = "GET"
-    
-    /// Patch method, used to change information.
-    case patch = "PATCH"
-    
-    /// Post method, used for create new information.
-    case post = "POST"
-}
-
-enum APIError: Error {
-    case malformedURL
-    case error(httpCode: Int, payload: Data?)
-}
-
 class API {
     
-    private static func create(request: Request, data: Data?) throws -> URLRequest {
-        guard let url = URL(string: "\(request.domain)\(request.endpoint)") else {
-            throw APIError.malformedURL
-        }
-        
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            throw APIError.malformedURL
+    private static let mediaCache = RequestCache(identifier: "Media")
+    
+    private static func create(request: Request) throws -> URLRequest {
+        guard let url = URL(string: request.path),
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                throw APIError.malformedURL
         }
         
         var queryItems: [URLQueryItem] = [URLQueryItem(name: "api_key", value: "khGhC8CtxrfEZa3ZQHN2XeSbDQ3kWIBEeFAjtRDn")]
@@ -85,7 +32,7 @@ class API {
         urlRequest.httpShouldUsePipelining = true
         urlRequest.httpMethod = request.method.rawValue
         
-        if let data = data {
+        if let data = request.data {
             urlRequest.httpBody = data
             urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
@@ -93,19 +40,45 @@ class API {
         return urlRequest
     }
     
-    public static func request<T: Codable>(request: Request, data: Data? = nil) throws -> T {
-        let data: Data = try self.request(request: request, data: data)
+    public static func request<T: Codable>(request: Request) throws -> T {
+        guard let data: Data = try self.request(request: request) else {
+            throw APIError.noContent
+        }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(T.self, from: data)
     }
     
-    public static func request(request: Request, data: Data? = nil) throws -> Data {
-        let urlRequest: URLRequest = try API.create(request: request, data: data)
+    public static func request(request: Request) throws -> Data? {
+        let urlRequest: URLRequest = try API.create(request: request)
+        let (data, response, error) = API.process(request: urlRequest)
+        
+        if let response = response {
+            if 200 <= response.statusCode && response.statusCode < 300 {
+                return data
+            } else {
+                throw APIError.error(httpCode: response.statusCode, payload: data)
+            }
+        }
+        
+        if let error = error as NSError? {
+            throw error
+        } else {
+            fatalError()
+        }
+    }
+    
+    public static func download(request: Request) throws -> Data {
+        if request.cache, let data = self.mediaCache[request.path] {
+            return data
+        }
+        
+        let urlRequest: URLRequest = try API.create(request: request)
         let (data, response, error) = API.process(request: urlRequest)
         
         if let response = response {
             if 200 <= response.statusCode && response.statusCode < 300, let data: Data = data {
+                if request.cache { self.mediaCache[request.path] = data }
                 return data
             } else {
                 throw APIError.error(httpCode: response.statusCode, payload: data)
@@ -173,46 +146,5 @@ extension API {
         print("\(message)----------------------------------\n")
     }
     
-}
-
-/// The data extensions.
-public extension Data {
-    /// Get the string of string data.
-    public var stringValue: String? {
-        if let  object = try? JSONSerialization.jsonObject(with: self, options: .allowFragments),
-            let string = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted, .sortedKeys]) {
-            return String(data: string, encoding: .utf8)
-        }
-        return String(data: self, encoding: .utf8)
-    }
-    
-    @inline(__always) mutating func append(string: String?) {
-        if let data = string?.data(using: .utf8, allowLossyConversion: false) {
-            append(data)
-        }
-    }
-}
-
-extension CFAbsoluteTime {
-    var humanReadable: String {
-        var suffix = "s"
-        var time = self
-        
-        if time > 100 {
-            suffix = "m"
-            time /= 60
-        } else if time < 1e-6 {
-            suffix = "ns"
-            time *= 1e9
-        } else if time < 1e-3 {
-            suffix = "µs"
-            time *= 1e6
-        } else if time < 1 {
-            suffix = "ms"
-            time *= 1000
-        }
-        
-        return "\(String(format: "%.2f", time))\(suffix)"
-    }
 }
 #endif
