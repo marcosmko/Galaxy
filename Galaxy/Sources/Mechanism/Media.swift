@@ -16,7 +16,7 @@ class Media {
     private static var lock: NSLock = NSLock()
     
     static func download(path: String, imageView: UIImageView) {
-        DispatchQueue.global().async {
+        let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             self.lock.lock()
             self.associated[imageView] = path
             self.lock.unlock()
@@ -40,7 +40,9 @@ class Media {
                 }
             }
             self.lock.unlock()
-        }
+        })
+        
+        QueueManager.shared.executeBlock(blockForExecutionInBackground, queueType: .concurrent)
     }
     
 }

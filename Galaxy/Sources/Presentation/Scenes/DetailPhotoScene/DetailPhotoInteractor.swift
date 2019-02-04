@@ -24,20 +24,24 @@ class DetailPhotoInteractor: DetailPhotoInteractorProtocol, DetailPhotoDataStore
     private var fullName: Bool = true
     
     func get(request: DetailPhoto.GetPhoto.Request) {
-        DispatchQueue.global().async {
+        let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             guard let photo = self.photo else { return }
             let response = DetailPhoto.GetPhoto.Response(photo: photo)
             self.presenter?.present(response: response)
-        }
+        })
+        
+        QueueManager.shared.executeBlock(blockForExecutionInBackground, queueType: .concurrent)
     }
     
     func get(request: DetailPhoto.GetName.Request) {
-        DispatchQueue.global().async {
+        let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             self.fullName.toggle()
             let name: String = (self.fullName ? self.photo?.camera?.fullName : self.photo?.camera?.name) ?? ""
             let response = DetailPhoto.GetName.Response(name: name)
             self.presenter?.present(response: response)
-        }
+        })
+        
+        QueueManager.shared.executeBlock(blockForExecutionInBackground, queueType: .concurrent)
     }
     
 }

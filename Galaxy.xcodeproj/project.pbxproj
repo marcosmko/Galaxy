@@ -39,6 +39,7 @@
 		F7E9BB2722086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */; };
 		F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */; };
 		F7E9BB2C22086E2000AE4D24 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2B22086E2000AE4D24 /* SHA1.swift */; };
+		F7E9BB2E2208797000AE4D24 /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2D2208797000AE4D24 /* QueueManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFAbsoluteTimeExtension.swift; sourceTree = "<group>"; };
 		F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCache.swift; sourceTree = "<group>"; };
 		F7E9BB2B22086E2000AE4D24 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		F7E9BB2D2208797000AE4D24 /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			children = (
 				F7E9BB1D2208692600AE4D24 /* API */,
 				F7CCAC602207669A00673513 /* Media.swift */,
+				F7E9BB2D2208797000AE4D24 /* QueueManager.swift */,
 			);
 			path = Mechanism;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
 				F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */,
 				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
+				F7E9BB2E2208797000AE4D24 /* QueueManager.swift in Sources */,
 				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
 				F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */,
 				F7E9BB2522086A3F00AE4D24 /* DataExtension.swift in Sources */,

@@ -28,7 +28,7 @@ class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
         let requestID: UInt = UInt.random(in: 0..<UInt.max)
         self.requestID = requestID
         
-        DispatchQueue.global().async {
+        let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             do {
                 // clean screen while we are fetching photos
                 self.presenter?.present(response: Mars.FetchPhotos.Response(photos: []))
@@ -53,7 +53,9 @@ class MarsInteractor: MarsInteractorProtocol, MarsDataStore {
                 // show error
                 print(error.localizedDescription)
             }
-        }
+        })
+        
+        QueueManager.shared.executeBlock(blockForExecutionInBackground, queueType: .concurrent)
     }
     
 }
