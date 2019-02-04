@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C22205FB2400F7F248 /* AppDelegate.swift */; };
+		F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3C42205FB2400F7F248 /* MarsViewController.swift */; };
+		F709E3C82205FB2400F7F248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C62205FB2400F7F248 /* Main.storyboard */; };
+		F709E3CA2205FB2600F7F248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F709E3C92205FB2600F7F248 /* Assets.xcassets */; };
+		F709E3CD2205FB2600F7F248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */; };
+		F709E3D82205FB2600F7F248 /* GalaxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3D72205FB2600F7F248 /* GalaxyTests.swift */; };
+		F709E3E32205FB2600F7F248 /* GalaxyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */; };
+		F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FA2206059700F7F248 /* MarsInteractor.swift */; };
+		F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FC220605A000F7F248 /* MarsRouter.swift */; };
+		F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E3FE220605AB00F7F248 /* MarsPresenter.swift */; };
+		F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E401220609FD00F7F248 /* URLSessionExtension.swift */; };
+		F709E40522060A9900F7F248 /* MarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40422060A9900F7F248 /* MarsModels.swift */; };
+		F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40822060B2800F7F248 /* MarsWorker.swift */; };
+		F709E40C22060CCA00F7F248 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40B22060CCA00F7F248 /* Photo.swift */; };
+		F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E40E22060D3A00F7F248 /* MarsAPI.swift */; };
+		F709E4122206145A00F7F248 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F709E4112206145A00F7F248 /* API.swift */; };
+		F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC5E220765DA00673513 /* ImageCell.swift */; };
+		F7CCAC612207669A00673513 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC602207669A00673513 /* Media.swift */; };
+		F7CCAC63220770E500673513 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC62220770E500673513 /* MarsRover.swift */; };
+		F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */; };
+		F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */; };
+		F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */; };
+		F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */; };
+		F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC71220787F500673513 /* DetailPhotoModels.swift */; };
+		F7CCAC742207917000673513 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCAC732207917000673513 /* Camera.swift */; };
+		F7E9BB1F2208693400AE4D24 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB1E2208693300AE4D24 /* Request.swift */; };
+		F7E9BB212208694E00AE4D24 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB202208694E00AE4D24 /* APIError.swift */; };
+		F7E9BB232208696C00AE4D24 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB222208696C00AE4D24 /* RequestMethod.swift */; };
+		F7E9BB2522086A3F00AE4D24 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */; };
+		F7E9BB2722086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */; };
+		F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */; };
+		F7E9BB2C22086E2000AE4D24 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2B22086E2000AE4D24 /* SHA1.swift */; };
+		F7E9BB2E2208797000AE4D24 /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB2D2208797000AE4D24 /* QueueManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F709E3D42205FB2600F7F248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F709E3B72205FB2400F7F248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F709E3BE2205FB2400F7F248;
+			remoteInfo = Galaxy;
+		};
+		F709E3DF2205FB2600F7F248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F709E3B72205FB2400F7F248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F709E3BE2205FB2400F7F248;
+			remoteInfo = Galaxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F709E3BF2205FB2400F7F248 /* Galaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3C22205FB2400F7F248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F709E3C42205FB2400F7F248 /* MarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsViewController.swift; sourceTree = "<group>"; };
+		F709E3C72205FB2400F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F709E3C92205FB2600F7F248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F709E3CC2205FB2600F7F248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F709E3CE2205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3D72205FB2600F7F248 /* GalaxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyTests.swift; sourceTree = "<group>"; };
+		F709E3D92205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyUITests.swift; sourceTree = "<group>"; };
+		F709E3E42205FB2600F7F248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F709E3FA2206059700F7F248 /* MarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsInteractor.swift; sourceTree = "<group>"; };
+		F709E3FC220605A000F7F248 /* MarsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRouter.swift; sourceTree = "<group>"; };
+		F709E3FE220605AB00F7F248 /* MarsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPresenter.swift; sourceTree = "<group>"; };
+		F709E401220609FD00F7F248 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		F709E40422060A9900F7F248 /* MarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsModels.swift; sourceTree = "<group>"; };
+		F709E40822060B2800F7F248 /* MarsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWorker.swift; sourceTree = "<group>"; };
+		F709E40B22060CCA00F7F248 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F709E40E22060D3A00F7F248 /* MarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsAPI.swift; sourceTree = "<group>"; };
+		F709E4112206145A00F7F248 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F7CCAC5E220765DA00673513 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F7CCAC602207669A00673513 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		F7CCAC62220770E500673513 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
+		F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoInteractor.swift; sourceTree = "<group>"; };
+		F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoPresenter.swift; sourceTree = "<group>"; };
+		F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoRouter.swift; sourceTree = "<group>"; };
+		F7CCAC71220787F500673513 /* DetailPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoModels.swift; sourceTree = "<group>"; };
+		F7CCAC732207917000673513 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		F7E9BB1E2208693300AE4D24 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F7E9BB202208694E00AE4D24 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F7E9BB222208696C00AE4D24 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFAbsoluteTimeExtension.swift; sourceTree = "<group>"; };
+		F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCache.swift; sourceTree = "<group>"; };
+		F7E9BB2B22086E2000AE4D24 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		F7E9BB2D2208797000AE4D24 /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F709E3BC2205FB2400F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3D02205FB2600F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DB2205FB2600F7F248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F709E3B62205FB2400F7F248 = {
+			isa = PBXGroup;
+			children = (
+				F709E3C12205FB2400F7F248 /* Galaxy */,
+				F709E3D62205FB2600F7F248 /* GalaxyTests */,
+				F709E3E12205FB2600F7F248 /* GalaxyUITests */,
+				F709E3C02205FB2400F7F248 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F709E3C02205FB2400F7F248 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3BF2205FB2400F7F248 /* Galaxy.app */,
+				F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */,
+				F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F709E3C12205FB2400F7F248 /* Galaxy */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3F72206004600F7F248 /* Resources */,
+				F7CCAC772207A12100673513 /* Sources */,
+			);
+			path = Galaxy;
+			sourceTree = "<group>";
+		};
+		F709E3D62205FB2600F7F248 /* GalaxyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3D72205FB2600F7F248 /* GalaxyTests.swift */,
+				F709E3D92205FB2600F7F248 /* Info.plist */,
+			);
+			path = GalaxyTests;
+			sourceTree = "<group>";
+		};
+		F709E3E12205FB2600F7F248 /* GalaxyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3E22205FB2600F7F248 /* GalaxyUITests.swift */,
+				F709E3E42205FB2600F7F248 /* Info.plist */,
+			);
+			path = GalaxyUITests;
+			sourceTree = "<group>";
+		};
+		F709E3F72206004600F7F248 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C92205FB2600F7F248 /* Assets.xcassets */,
+				F709E3CE2205FB2600F7F248 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F709E400220605B300F7F248 /* MarsScene */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3FA2206059700F7F248 /* MarsInteractor.swift */,
+				F709E40422060A9900F7F248 /* MarsModels.swift */,
+				F709E3FE220605AB00F7F248 /* MarsPresenter.swift */,
+				F709E3FC220605A000F7F248 /* MarsRouter.swift */,
+				F709E3C42205FB2400F7F248 /* MarsViewController.swift */,
+			);
+			path = MarsScene;
+			sourceTree = "<group>";
+		};
+		F709E40722060B0D00F7F248 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40822060B2800F7F248 /* MarsWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F709E40A22060CBB00F7F248 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40B22060CCA00F7F248 /* Photo.swift */,
+				F7CCAC732207917000673513 /* Camera.swift */,
+				F7CCAC62220770E500673513 /* MarsRover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F709E40D22060D2D00F7F248 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F709E40E22060D3A00F7F248 /* MarsAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F709E4102206144D00F7F248 /* Mechanism */ = {
+			isa = PBXGroup;
+			children = (
+				F7E9BB1D2208692600AE4D24 /* API */,
+				F7CCAC602207669A00673513 /* Media.swift */,
+				F7E9BB2D2208797000AE4D24 /* QueueManager.swift */,
+			);
+			path = Mechanism;
+			sourceTree = "<group>";
+		};
+		F7CCAC642207808500673513 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C62205FB2400F7F248 /* Main.storyboard */,
+				F7CCAC652207809B00673513 /* Views */,
+				F7E9BB2822086AD300AE4D24 /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F7CCAC652207809B00673513 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7CCAC5E220765DA00673513 /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CCAC66220780A300673513 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7E9BB2622086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift */,
+				F7E9BB2422086A3F00AE4D24 /* DataExtension.swift */,
+				F709E401220609FD00F7F248 /* URLSessionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7CCAC6A220787BF00673513 /* DetailPhotoScene */ = {
+			isa = PBXGroup;
+			children = (
+				F7CCAC6B220787D800673513 /* DetailPhotoInteractor.swift */,
+				F7CCAC71220787F500673513 /* DetailPhotoModels.swift */,
+				F7CCAC6D220787E100673513 /* DetailPhotoPresenter.swift */,
+				F7CCAC6F220787E900673513 /* DetailPhotoRouter.swift */,
+				F7CCAC67220783E900673513 /* DetailPhotoViewController.swift */,
+			);
+			path = DetailPhotoScene;
+			sourceTree = "<group>";
+		};
+		F7CCAC772207A12100673513 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7E9BB1C220868FF00AE4D24 /* App */,
+				F709E4102206144D00F7F248 /* Mechanism */,
+				F7CCAC66220780A300673513 /* Extensions */,
+				F709E40A22060CBB00F7F248 /* Models */,
+				F7CCAC642207808500673513 /* Presentation */,
+				F709E40722060B0D00F7F248 /* Workers */,
+				F709E40D22060D2D00F7F248 /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F7E9BB1C220868FF00AE4D24 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F709E3C22205FB2400F7F248 /* AppDelegate.swift */,
+				F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F7E9BB1D2208692600AE4D24 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F709E4112206145A00F7F248 /* API.swift */,
+				F7E9BB202208694E00AE4D24 /* APIError.swift */,
+				F7E9BB1E2208693300AE4D24 /* Request.swift */,
+				F7E9BB2922086C2D00AE4D24 /* RequestCache.swift */,
+				F7E9BB222208696C00AE4D24 /* RequestMethod.swift */,
+				F7E9BB2B22086E2000AE4D24 /* SHA1.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F7E9BB2822086AD300AE4D24 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F709E400220605B300F7F248 /* MarsScene */,
+				F7CCAC6A220787BF00673513 /* DetailPhotoScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F709E3BE2205FB2400F7F248 /* Galaxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3E72205FB2600F7F248 /* Build configuration list for PBXNativeTarget "Galaxy" */;
+			buildPhases = (
+				F709E3BB2205FB2400F7F248 /* Sources */,
+				F709E3BC2205FB2400F7F248 /* Frameworks */,
+				F709E3BD2205FB2400F7F248 /* Resources */,
+				F7CCAC762207A01400673513 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Galaxy;
+			productName = Galaxy;
+			productReference = F709E3BF2205FB2400F7F248 /* Galaxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F709E3D22205FB2600F7F248 /* GalaxyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3EA2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyTests" */;
+			buildPhases = (
+				F709E3CF2205FB2600F7F248 /* Sources */,
+				F709E3D02205FB2600F7F248 /* Frameworks */,
+				F709E3D12205FB2600F7F248 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F709E3D52205FB2600F7F248 /* PBXTargetDependency */,
+			);
+			name = GalaxyTests;
+			productName = GalaxyTests;
+			productReference = F709E3D32205FB2600F7F248 /* GalaxyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F709E3DD2205FB2600F7F248 /* GalaxyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F709E3ED2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyUITests" */;
+			buildPhases = (
+				F709E3DA2205FB2600F7F248 /* Sources */,
+				F709E3DB2205FB2600F7F248 /* Frameworks */,
+				F709E3DC2205FB2600F7F248 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F709E3E02205FB2600F7F248 /* PBXTargetDependency */,
+			);
+			name = GalaxyUITests;
+			productName = GalaxyUITests;
+			productReference = F709E3DE2205FB2600F7F248 /* GalaxyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F709E3B72205FB2400F7F248 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Marcos Kobuchi";
+				TargetAttributes = {
+					F709E3BE2205FB2400F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F709E3D22205FB2600F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F709E3BE2205FB2400F7F248;
+					};
+					F709E3DD2205FB2600F7F248 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F709E3BE2205FB2400F7F248;
+					};
+				};
+			};
+			buildConfigurationList = F709E3BA2205FB2400F7F248 /* Build configuration list for PBXProject "Galaxy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F709E3B62205FB2400F7F248;
+			productRefGroup = F709E3C02205FB2400F7F248 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F709E3BE2205FB2400F7F248 /* Galaxy */,
+				F709E3D22205FB2600F7F248 /* GalaxyTests */,
+				F709E3DD2205FB2600F7F248 /* GalaxyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F709E3BD2205FB2400F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3CD2205FB2600F7F248 /* LaunchScreen.storyboard in Resources */,
+				F709E3CA2205FB2600F7F248 /* Assets.xcassets in Resources */,
+				F709E3C82205FB2400F7F248 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3D12205FB2600F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DC2205FB2600F7F248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F7CCAC762207A01400673513 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F709E3BB2205FB2400F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E4122206145A00F7F248 /* API.swift in Sources */,
+				F709E40922060B2800F7F248 /* MarsWorker.swift in Sources */,
+				F7CCAC6E220787E100673513 /* DetailPhotoPresenter.swift in Sources */,
+				F709E3FB2206059700F7F248 /* MarsInteractor.swift in Sources */,
+				F7E9BB1F2208693400AE4D24 /* Request.swift in Sources */,
+				F709E3C52205FB2400F7F248 /* MarsViewController.swift in Sources */,
+				F7E9BB2C22086E2000AE4D24 /* SHA1.swift in Sources */,
+				F709E40C22060CCA00F7F248 /* Photo.swift in Sources */,
+				F7CCAC70220787E900673513 /* DetailPhotoRouter.swift in Sources */,
+				F7CCAC5F220765DA00673513 /* ImageCell.swift in Sources */,
+				F7CCAC63220770E500673513 /* MarsRover.swift in Sources */,
+				F7E9BB2A22086C2D00AE4D24 /* RequestCache.swift in Sources */,
+				F709E40522060A9900F7F248 /* MarsModels.swift in Sources */,
+				F7E9BB2E2208797000AE4D24 /* QueueManager.swift in Sources */,
+				F709E3C32205FB2400F7F248 /* AppDelegate.swift in Sources */,
+				F709E402220609FD00F7F248 /* URLSessionExtension.swift in Sources */,
+				F7E9BB2522086A3F00AE4D24 /* DataExtension.swift in Sources */,
+				F7E9BB232208696C00AE4D24 /* RequestMethod.swift in Sources */,
+				F709E3FD220605A000F7F248 /* MarsRouter.swift in Sources */,
+				F7CCAC72220787F500673513 /* DetailPhotoModels.swift in Sources */,
+				F7CCAC612207669A00673513 /* Media.swift in Sources */,
+				F7CCAC68220783E900673513 /* DetailPhotoViewController.swift in Sources */,
+				F7CCAC742207917000673513 /* Camera.swift in Sources */,
+				F7E9BB2722086A7D00AE4D24 /* CFAbsoluteTimeExtension.swift in Sources */,
+				F709E3FF220605AB00F7F248 /* MarsPresenter.swift in Sources */,
+				F7CCAC6C220787D800673513 /* DetailPhotoInteractor.swift in Sources */,
+				F709E40F22060D3A00F7F248 /* MarsAPI.swift in Sources */,
+				F7E9BB212208694E00AE4D24 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3CF2205FB2600F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3D82205FB2600F7F248 /* GalaxyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F709E3DA2205FB2600F7F248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F709E3E32205FB2600F7F248 /* GalaxyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F709E3D52205FB2600F7F248 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F709E3BE2205FB2400F7F248 /* Galaxy */;
+			targetProxy = F709E3D42205FB2600F7F248 /* PBXContainerItemProxy */;
+		};
+		F709E3E02205FB2600F7F248 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F709E3BE2205FB2400F7F248 /* Galaxy */;
+			targetProxy = F709E3DF2205FB2600F7F248 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F709E3C62205FB2400F7F248 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F709E3C72205FB2400F7F248 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F709E3CB2205FB2600F7F248 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F709E3CC2205FB2600F7F248 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F709E3E52205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F709E3E62205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F709E3E82205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BGJ8NS22M;
+				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.Galaxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F709E3E92205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BGJ8NS22M;
+				INFOPLIST_FILE = "$(SRCROOT)/Galaxy/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.Galaxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F709E3EB2205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Galaxy.app/Galaxy";
+			};
+			name = Debug;
+		};
+		F709E3EC2205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Galaxy.app/Galaxy";
+			};
+			name = Release;
+		};
+		F709E3EE2205FB2600F7F248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galaxy;
+			};
+			name = Debug;
+		};
+		F709E3EF2205FB2600F7F248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GalaxyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobuchi.GalaxyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galaxy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F709E3BA2205FB2400F7F248 /* Build configuration list for PBXProject "Galaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3E52205FB2600F7F248 /* Debug */,
+				F709E3E62205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3E72205FB2600F7F248 /* Build configuration list for PBXNativeTarget "Galaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3E82205FB2600F7F248 /* Debug */,
+				F709E3E92205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3EA2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3EB2205FB2600F7F248 /* Debug */,
+				F709E3EC2205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F709E3ED2205FB2600F7F248 /* Build configuration list for PBXNativeTarget "GalaxyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F709E3EE2205FB2600F7F248 /* Debug */,
+				F709E3EF2205FB2600F7F248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F709E3B72205FB2400F7F248 /* Project object */;
+}
