@@ -16,7 +16,7 @@ class MarsPresenter: MarsPresenterProtocol {
     weak var viewController: MarsDisplayLogic?
     
     func present(response: Mars.FetchPhotos.Response) {
-        DispatchQueue.main.async {
+        let blockForExecutionInMainThread: BlockOperation = BlockOperation(block: {
             var displayedPhotos: [Mars.FetchPhotos.ViewModel.DisplayedPhoto] = []
             for photo in response.photos {
                 guard let image = photo.imgSrc else { continue }
@@ -25,7 +25,9 @@ class MarsPresenter: MarsPresenterProtocol {
             }
             let viewModel = Mars.FetchPhotos.ViewModel(displayedPhotos: displayedPhotos)
             self.viewController?.display(viewModel: viewModel)
-        }
+        })
+        
+        QueueManager.shared.executeBlock(blockForExecutionInMainThread, queueType: .main)
     }
     
 }
